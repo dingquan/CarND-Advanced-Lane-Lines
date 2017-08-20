@@ -118,6 +118,7 @@ This is implemented in `draw_lane_region()` function in section 5.  Here is an e
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 Here's a [link to my video result](./output_videos/project_video.mp4)
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LuIEBhCekxk/0.jpg)](https://www.youtube.com/watch?v=LuIEBhCekxk)
 ---
 
