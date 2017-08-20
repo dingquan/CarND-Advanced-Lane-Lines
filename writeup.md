@@ -88,6 +88,8 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
+To identify the lane lines from scratch, I used the sliding window technique described in the course material. First I create a histogram of all columns in the lower half of the binary warped image. Then identify the two peaks in the histogram. Then we slice the images into 9 sections, use the two peaks identified early as the base line to search for the lane line in each section. Once we find all the pixels representing the lane lines, we do a second order polynomial fit as the detected lane lines.
+
 The code to find the lane lines is in section 4 of the notebook. Here's a sample result image:
 
 ![alt text][image5]
@@ -116,7 +118,7 @@ This is implemented in `draw_lane_region()` function in section 5.  Here is an e
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 Here's a [link to my video result](./output_videos/project_video.mp4)
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LuIEBhCekxk/0.jpg)](https://www.youtube.com/watch?v=LuIEBhCekxk)
 ---
 
 ### Discussion
