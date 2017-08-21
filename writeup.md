@@ -20,8 +20,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./writeup_images/camera-calibration.png "Undistorted"
-[image2]: ./test_images/test9.jpg "Road Transformed"
-[image3]: ./writeup_images/thresholding.png "Binary Example"
+[image2]: ./test_images/test1.jpg "Road Transformed"
+[image3]: ./writeup_images/bright.png "Binary Example"
 [image4]: ./writeup_images/perspective.png "Warp Example"
 [image5]: ./writeup_images/lane-lines.png "Fit Visual"
 [image6]: ./writeup_images/output.png "Output"
@@ -60,15 +60,16 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color, hsv and gradient thresholds to generate a binary image (thresholding steps at Section 3 of the notebook).  Here's an example of my output for this step.
+Through experiements and taking advices from the mentors, I used a combination of L channel from LUV, B channel from LAB and gradient thresholds to generate a binary image (thresholding steps at Section 3 of the notebook).  Here's an example of my output for this step.
 
-I used HSV instead of HLS as suggested by mentors in the forum. It seems to perform marginally better than HLS.
 
 ![alt text][image3]
 
-As you can see, the Sobel threshhold works pretty well for most cases except for bright images as shown below. For which the S channel threshold works better.
+Here's an image with dark shadows and the various thresholding output
 
-![bright patches of the road](writeup_images/bright-image.png)
+![shadow](test_images/test9.jpg)
+
+![shadow binary](writeup_images/shadow.png)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -119,7 +120,7 @@ This is implemented in `draw_lane_region()` function in section 5.  Here is an e
 
 Here's a [link to my video result](./output_videos/project_video.mp4)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LuIEBhCekxk/0.jpg)](https://www.youtube.com/watch?v=LuIEBhCekxk)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IJBiJCn6ofg/0.jpg)](https://www.youtube.com/watch?v=IJBiJCn6ofg)
 ---
 
 ### Discussion
